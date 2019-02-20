@@ -1,0 +1,16 @@
+{
+  "name": "restfulapi-express",
+  "version": "1.0.0",
+  "description": "simple restful API CRUD using Express js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}

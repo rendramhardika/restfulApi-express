@@ -58,12 +58,27 @@ exports.createMahasiswa = function(req, res){
 
     connection.query('INSERT INTO mahasiswa VALUES (?,?,?,?)', [nim, nama, email, prodi], function(error, rows, fields){
         if(error){
-            console.log(error)
-            
+            console.log(error)           
         }
         else{
             response.ok("berhasil menambah data mahasiswa", res)
         }
     })
+}
 
+//for update data mahasiswa
+exports.updateMahasiswa = function(req, res){
+    var nim = req.params.nim
+    var nama = req.body.nama
+    var email = req.body.email
+    var prodi = req.body.prodi
+
+    connection.query('UPDATE mahasiswa SET nama = ?, email = ?, prodi = ? WHERE nim = ?', [nama, email, prodi, nim], function(error, rows, fields){
+        if(error){
+            console.log(error)
+        }
+        else{
+            response.ok("berhasil mengubah data mahasiswa", res)
+        }
+    })
 }
